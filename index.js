@@ -1,7 +1,9 @@
+var div = document.querySelector('.res');
+
 var find = function (cl, num) {
 	var el = document.querySelector('.' + cl);
 	var ch = function() {
-		console.log(num);
+		div.textContent = num;
 	};
 	el.addEventListener('click', ch);
 };
