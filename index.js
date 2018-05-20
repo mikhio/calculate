@@ -3,7 +3,9 @@ var div = document.querySelector('.res');
 var find = function (cl, num) {
 	var el = document.querySelector('.' + cl);
 	var ch = function() {
-		if (num === '+' || num === '-' || num === '*' || num === '/') {
+		if (num === '=') {
+			div.textContent = eval(div.textContent);
+		} else if (num === '+' || num === '-' || num === '*' || num === '/') {
 			div.textContent += num;
 		} else if (cl === 'delet' && div.textContent.length > 1) {
 			div.textContent = div.textContent.slice(0, -1);
@@ -36,4 +38,4 @@ find('del', '/');
 find('um', '*');
 find('minus', '-');
 find('plus', '+');
-//find('equally', =);
+find('equally', '=');
